@@ -7,7 +7,6 @@ function App() {
     return (
         <div>
             <PageTitle title={"This is APP component"}/>
-            <Rating value={3}/>
             <Accordion titleValue={"Menu"} collapsed={true}/>
             <Accordion titleValue={"Users"} collapsed={false}/>
             <Rating value={0}/>

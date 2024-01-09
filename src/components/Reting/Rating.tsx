@@ -8,11 +8,12 @@ export function Rating(props:RatingProps) {
 
     return (
         <div>
-            <Star selected={true}/>
-            <Star selected={true}/>
-            <Star selected={true}/>
-            <Star selected={true}/>
-            <Star selected={true}/>
+            <Star selected={props.value > 0}/>
+            <Star selected={props.value > 1}/>
+            <Star selected={props.value > 2}/>
+            <Star selected={props.value > 3}/>
+            <Star selected={props.value > 4}/>
+            <Star selected={props.value > 5}/>
         </div>
     );
 }
