@@ -1,9 +1,11 @@
 import React from "react";
 
-type RatingPropsType = {
+type RatingProps = {
     value:number
+    // value:1|2|3|4|5
 }
-export function Rating(props:RatingPropsType) {
+export function Rating(props:RatingProps) {
+
     return (
         <div>
             <Star selected={true}/>
