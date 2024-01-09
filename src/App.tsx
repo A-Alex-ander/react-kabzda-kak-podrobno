@@ -4,25 +4,27 @@ import {Rating} from "./components/Reting/Rating";
 import {Accordion} from "./components/Accordion/Accodion";
 
 function App() {
-  return (
-    <div className="App">
-     <AppTitle/>
-     <Rating/>
-     <Accordion/>
-     <Rating/>
+    return (
+        <div>
+            <PageTitle title={"This is APP component"}/>
+            <Rating value={3}/>
+            <Accordion/>
+            <Rating value={0}/>
+            <Rating value={1}/>
+            <Rating value={2}/>
+            <Rating value={3}/>
+            <Rating value={4}/>
+            <Rating value={5}/>
 
-    </div>
-  );
+        </div>
+    );
 }
-
-function AppTitle (){
-    return <>This si APP component</>
+type PageTitleProps = {
+    title:string
 }
-
-
-
-
-
+function PageTitle(props:PageTitleProps) {
+    return <h1>{props.title}</h1>
+}
 
 
 export default App;
