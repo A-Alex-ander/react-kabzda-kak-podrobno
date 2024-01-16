@@ -5,29 +5,45 @@ import {Accordion} from "./components/Accordion/Accodion";
 import {OnOff} from "./components/OnOff/OnOff";
 import {UncontrolledAccordion} from "./components/Accordion/UncontrolledAccodion";
 import {UncontrolledRating} from "./components/Reting/UncontrolledRating";
+import {UncontrolledOnOff} from "./components/OnOff/UncontroledOnOff";
 
 function App() {
-    let [ratingValue,setRatingValue]=useState<RatingValueType>(0)
+    // let [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
+    let [switchOn, setSwitchOn] = useState<boolean>(false)
     return (
         <div className={"App"}>
-            {/*<OnOff />*/}
+            {/*<Accordion*/}
+            {/*    titleValue={"Menu"}*/}
+            {/*    collapsed={accordionCollapsed}*/}
+            {/*    onChange={() => {*/}
+            {/*        setAccordionCollapsed(!accordionCollapsed)*/}
+            {/*    }}*/}
+            {/*/>*/}
+            {/*<OnOff on={switchOn} onChange={setSwitchOn}/>*/}
+            {/*<Rating value={ratingValue}*/}
+            {/*        onClick={setRatingValue}*/}
+            {/*/>*/}
+            <UncontrolledAccordion titleValue={"Menu"}/>
+            <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
+
             {/*<PageTitle title={"This is APP component"}/>*/}
             {/*<UncontrolledAccordion titleValue={"Menu"}/>*/}
-            {/*<UncontrolledAccordion titleValue={"User"}/>*/}
 
+            {/*<UncontrolledAccordion titleValue={"User"}/>*/}
             {/*<Accordion titleValue={"Menu"} collapsed={true}/>*/}
             {/*<Accordion titleValue={"Users"} collapsed={false}/>*/}
             {/*<UncontrolledRating/>*/}
-            <Rating value={ratingValue}
-                    onClick={setRatingValue}/>
-
         </div>
-    );
+    )
 }
+
+
 type PageTitleProps = {
-    title:string
+    title: string
 }
-function PageTitle(props:PageTitleProps) {
+
+function PageTitle(props: PageTitleProps) {
     return <h1>{props.title}</h1>
 }
 
