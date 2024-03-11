@@ -1,6 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import {action} from "@storybook/addon-actions"
-import { Accordion } from './Accodion';
+import {Accordion} from './Accodion';
 import React, {useState} from "react";
 
 export default {
